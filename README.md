@@ -8,8 +8,7 @@
 
 ## Instructions
 1. Download this NuGet Media Plugin then
-2.[Go through this video tutorial video tutorial](http://www.codechannels.com/video/microsoft/mobile-development/xamarin-forms-taking-pictures-from-the-camera-and-from-disk-using-the-media-plugin/)
-
+2.[Go through this video tutorial video tutorial for a better understanding](http://www.codechannels.com/video/microsoft/mobile-development/xamarin-forms-taking-pictures-from-the-camera-and-from-disk-using-the-media-plugin/)
 3. Start a new Xamarin.Forms project 
 4. Download and install the  Plugin.Media NuGet package
 5. Inside of the shared project, add a button and image:

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:testcamapp" x:Class="testcamapp.testcamappPage">
+<StackLayout>
+	<Button x:Name="TakePicture_button" Clicked="TakePictureButton_Clicked" Text="TakePicture_button"/>
+	<Button x:Name="takePhoto" Text="takePhoto"/>
+	<Image x:Name="image" HeightRequest="240" />
+</StackLayout>
+</ContentPage>

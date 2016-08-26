@@ -65,3 +65,5 @@ That's why I have this line of code:
 ```
 await CrossMedia.Current.Initialize();
 ```
+
+I discovered the solution at [this bug report from Xamarin.](https://github.com/jamesmontemagno/Xamarin.Plugins/issues/21700)

@@ -7,7 +7,7 @@
 
 
 ## Instructions
-1. [Go through this video tutorial video tutorial for a better understanding](http://www.codechannels.com/video/microsoft/mobile-development/xamarin-forms-taking-pictures-from-the-camera-and-from-disk-using-the-media-plugin/)
+1. [Go through this video tutorial for a better understanding](http://www.codechannels.com/video/microsoft/mobile-development/xamarin-forms-taking-pictures-from-the-camera-and-from-disk-using-the-media-plugin/)
 
 2. Start a new Xamarin.Forms project 
 

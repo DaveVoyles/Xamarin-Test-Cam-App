@@ -27,28 +27,45 @@
 5. In the .cs page for that XAML, add the event handler to take a photo:
 
 ``` C#
-        async void TakePictureButton_Clicked(object sender,EventArgs e) 
-        {
-            // Without this line, you may be waiting for a bit
+  // Can access all images, to display them on screen at once
+   public List<Plugin.Media.Abstractions.MediaFile> imagesList = new List<Plugin.Media.Abstractions.MediaFile>();
+  
+   async void TakePictureButton_Clicked(object sender, EventArgs e)
+        {
             await CrossMedia.Current.Initialize();
-            if (CrossMedia.Current.IsCameraAvailable && CrossMedia.Current.IsTakePhotoSupported)
-            {
-                // Supply media options for saving our photo after it's taken.
-                var mediaOptions = new Plugin.Media.Abstractions.StoreCameraMediaOptions
-                {
-                    Directory = "Receipts",
-                    Name = $"{DateTime.UtcNow}.jpg"
-                };
+            if (CrossMedia.Current.IsCameraAvailable && CrossMedia.Current.IsTakePhotoSupported)
+            {
+                // Supply media options for saving our photo after it's taken.
+                var mediaOptions = new Plugin.Media.Abstractions.StoreCameraMediaOptions
+                {
+                    Directory = "Images",
+                    Name = $"{DateTime.UtcNow}.jpg"
+                };
 
-                // Take a photo of the business receipt.
-                var file = await CrossMedia.Current.TakePhotoAsync(mediaOptions);
-            }
-            else if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
-            {
-                DisplayAlert("no cam", "Camera not available", "OK"); 
-                return;
-            }
-        } 
+                // Take a photo 
+                var file = await CrossMedia.Current.TakePhotoAsync(mediaOptions);
+
+                if (file == null) { return; }
+
+                // Notify user that file is being saved and where it is located.
+                // Display image on screen.
+                await DisplayAlert("File Location", file.Path, "OK");
+                image.Source = ImageSource.FromStream(() =>
+                {
+                    imagesList.Add(file);
+                    var stream = file.GetStream();
+                    file.Dispose();
+                    Debug.WriteLine("New image: " + imagesList);
+                    return stream;
+                });
+            }
+
+            else if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
+            {
+                DisplayAlert("no cam", "Camera not available", "OK");
+                return;
+            }
+        }
 ```
 6. In the same page, add the using statement:
 using Plugin.Media;

@@ -20,16 +20,12 @@ namespace testcamapp {
         private global::Xamarin.Forms.Button TakePicture_button;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.Button takePhoto;
-        
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Image image;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(testcamappPage));
             TakePicture_button = this.FindByName <global::Xamarin.Forms.Button>("TakePicture_button");
-            takePhoto = this.FindByName <global::Xamarin.Forms.Button>("takePhoto");
             image = this.FindByName <global::Xamarin.Forms.Image>("image");
         }
     }

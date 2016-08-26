@@ -1,18 +1,17 @@
-﻿<Properties StartupItem="iOS/testcamapp.iOS.csproj">
+﻿<Properties StartupItem="iOS/testcamapp.iOS.csproj" StartupConfiguration="{0D2AF62A-FEE2-4433-B29A-EB56B8107A07}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="testcamapp/testcamappPage.xaml.cs">
     <Files>
-      <File FileName="testcamapp/testcamappPage.xaml" Line="8" Column="1" />
-      <File FileName="testcamapp/testcamappPage.xaml.cs" Line="16" Column="1" />
+      <File FileName="testcamapp/testcamappPage.xaml.cs" Line="47" Column="4" />
       <File FileName="iOS/obj/iPhoneSimulator/Debug/testcamapp.iOS..Users.DaveVoyles.Desktop.testcamapp.testcamapp.testcamappPage.xaml.g.cs" Line="1" Column="1" />
-      <File FileName="../../../../Library/Frameworks/Xamarin.iOS.framework/Versions/9.8.2.22/lib/mono/2.1/Xamarin.iOS.Common.targets" Line="1" Column="1" />
       <File FileName="iOS/packages.config" Line="1" Column="1" />
       <File FileName="iOS/Info.plist" />
+      <File FileName="testcamapp/App.xaml.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.testcamapp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.9946fcf990a2a1259898315820f2b604c921e1f2" />
+  <MonoDevelop.Ide.ItemProperties.testcamapp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.F3AC4027-298F-4569-9529-1313CFC66837" />
 </Properties>

@@ -7,11 +7,13 @@
 
 
 ## Instructions
-1. Download this NuGet Media Plugin then
-2.[Go through this video tutorial video tutorial for a better understanding](http://www.codechannels.com/video/microsoft/mobile-development/xamarin-forms-taking-pictures-from-the-camera-and-from-disk-using-the-media-plugin/)
-3. Start a new Xamarin.Forms project 
-4. Download and install the  Plugin.Media NuGet package
-5. Inside of the shared project, add a button and image:
+1.[Go through this video tutorial video tutorial for a better understanding](http://www.codechannels.com/video/microsoft/mobile-development/xamarin-forms-taking-pictures-from-the-camera-and-from-disk-using-the-media-plugin/)
+
+2. Start a new Xamarin.Forms project 
+
+3. Download and install the  Plugin.Media NuGet package
+
+4. Inside of the shared project, add a button and image:
 
 ```XAML 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:testcamapp" x:Class="testcamapp.testcamappPage">
@@ -22,7 +24,7 @@
 </ContentPage> 
 ```
 
-6. In the .cs page for that XAML, add the event handler to take a photo:
+5. In the .cs page for that XAML, add the event handler to take a photo:
 
 ``` C#
         async void TakePictureButton_Clicked(object sender,EventArgs e) 
@@ -47,5 +49,7 @@
             }
         } 
 ```
+6. In the same page, add the using statement:
+using Plugin.Media;
 
 7. Deploy to device

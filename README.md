@@ -29,7 +29,8 @@
 ``` C#
         async void TakePictureButton_Clicked(object sender,EventArgs e) 
         {
-
+            // Without this line, you may be waiting for a bit
+            await CrossMedia.Current.Initialize();
             if (CrossMedia.Current.IsCameraAvailable && CrossMedia.Current.IsTakePhotoSupported)
             {
                 // Supply media options for saving our photo after it's taken.
@@ -53,3 +54,14 @@
 using Plugin.Media;
 
 7. Deploy to device
+
+
+## Gotchas
+There's always something, right?
+
+On UWP (Win 10), you must initialize the camera first, otherwise it may take up to 1 minute for the camera to load, and it appears the application froze.
+
+That's why I have this line of code:
+```
+await CrossMedia.Current.Initialize();
+```
